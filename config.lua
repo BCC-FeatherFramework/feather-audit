@@ -20,6 +20,11 @@ Config.Producers = {
         enabled = true, sourceInstance = Config.SourceInstance,
         eventPrefixes = { 'admin.action.' }, versions = { [1] = true }, maxPerMinute = 600
     },
+    -- bcc-banks bank actions (schemas/banks/action_recorded_v1.lua).
+    ['bcc-banks'] = {
+        enabled = true, sourceInstance = Config.SourceInstance,
+        eventPrefixes = { 'bank.action.' }, versions = { [1] = true }, maxPerMinute = 600
+    },
     -- Temporary durable fixture registration for A1/A2 acceptance only:
     ['feather-audit-smoke-producer'] = {
         enabled = true,
